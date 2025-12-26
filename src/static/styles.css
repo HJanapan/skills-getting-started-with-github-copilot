@@ -155,12 +155,13 @@ footer {
 }
 
 .participants ul {
-  list-style: disc inside;
+  list-style: none;
   margin: 0;
   padding: 0;
   max-height: 120px;
   overflow-y: auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
 
@@ -169,10 +170,13 @@ footer {
   border: 1px solid #eee;
   padding: 6px 8px;
   border-radius: 6px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   font-size: 14px;
   color: #444;
   word-break: break-word;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .participants li.no-participants {
@@ -182,4 +186,25 @@ footer {
   font-style: italic;
   padding: 0;
   margin-bottom: 0;
+  display: block;
+}
+
+.delete-participant-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.delete-participant-btn:hover {
+  color: #e53935;
 }
